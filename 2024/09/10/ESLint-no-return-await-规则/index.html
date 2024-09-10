@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ESLint no-return-await 规则 - 鼠熊部落格</title>
+  
+  <!-- stylesheets list from _config.yml -->
+  
+  <link rel="stylesheet" href="/css/chippy.css">
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <nav class="menu-outer">
+    <div class="menu-inner">
+      
+      <a class="menu-inner-item" href="/">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">首页</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/about">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">关于我</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/archives">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">归档</span>
+      </a>
+      
+    </div>
+  </nav>
+
+  <header class="header-outer">
+    <div class="header-inner">
+      <div class="header-info">
+        
+        <h1 class="header-info-title">
+          Chipmunk &amp; Panda
+        </h1>
+        
+        
+        <h3 class="header-info-subtitle">
+          -- 鼠熊部落格
+        </h3>
+        
+        
+        <p class="header-info-motto">
+          All work and no play makes Jack a dull boy.
+        </p>
+        
+        <div class="header-info-contact">
+          <a target="_blank" rel="noopener" href="https://github.com/SummerDiver" class="header-info-contact-icon">
+            <i class="icon-github"></i>
+          </a>
+          <a target="_blank" rel="noopener" href="https://weibo.com/u/7390819624" class="header-info-contact-icon">
+            <i class="icon-sina-weibo"></i>
+          </a>
+          <a href="mailto:summerdiver@yeah.net" class="header-info-contact-icon">
+            <i class="icon-mail4"></i>
+          </a>
+          <a href="" class="header-info-contact-icon ie" onclick="return false">
+            <i class="icon-IE"></i>
+          </a>
+        </div>
+      </div>
+      <a href="#content" class="header-arrow">
+        <i class="icon-forward2"></i>
+      </a>
+    </div>
+  </header>
+
+  <div id="content" class="content-outer clearfix">
+    <aside id="content-aside" class="content-aside">
+      
+
+
+<div class="aside-card aside-ov">
+  <div class="author">
+    <div class="author-avatar">
+      <img src="/images/avatar.jpg">
+    </div>
+    <h4 class="author-name">暑熊</h4>
+    <p class="author-motto">自家慢诩便便腹，开卷方知未读书。</p>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="site-state">
+    <a class="site-state-item" href="/archives">
+      <span class="site-state-item-count">25</span>
+      <span class="site-state-item-name">归档</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/categories">
+      <span class="site-state-item-count">5</span>
+      <span class="site-state-item-name">分类</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/tags">
+      <span class="site-state-item-count">21</span>
+      <span class="site-state-item-name">标签</span>
+    </a>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="friends">
+    <div>
+      <i class="icon-link"></i>&nbsp;友情链接
+    </div>
+    
+    <div class="no-friends">
+      <span class="icon-tongue"></span><br>
+      <span>朋友都没有，好像一条狗</span>
+    </div>
+    
+    <ul class="friends-list">
+      
+    </ul>
+  </div>
+</div>
+    </aside>
+    <main class="content-inner">
+      <article id="post">
+  <div class="post-header">
+  
+  <h1 class="post-title" href="/2024/09/10/ESLint-no-return-await-%E8%A7%84%E5%88%99/">ESLint no-return-await 规则</h1>
+  
+
+  <div class="post-meta">
+    <time class="post-date" datetime="2024-09-10T09:01:31.000Z">
+      <i class="icon-calendar"></i>&nbsp;2024-09-10
+    </time>
+
+    
+    <span class="post-categories">
+      <i class="icon-folder">&nbsp;</i>
+      <a class="post-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </span>
+    
+
+    
+    <span class="post-tags">
+      <i class="icon-price-tags">&nbsp;</i>
+      <a class="post-tag-link" href="/tags/ESLint/" rel="tag">#ESLint</a>&nbsp;<a class="post-tag-link" href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+    </span>
+    
+  </div>
+</div>
+  
+  <p>ESLint 原有 <a target="_blank" rel="noopener" href="https://eslint.org/docs/latest/rules/no-return-await">no-return-await</a> 规则，旨在避免如下情景：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> <span class="hljs-title function_">bar</span>()<br>&#125;<br><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">baz</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">const</span> barRes = <span class="hljs-keyword">await</span> <span class="hljs-title function_">bar</span>()<br>  <span class="hljs-keyword">return</span> barRes<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在以前，无论等待的是什么，await 都会将之后的返回值包装为 Promise 对象（即使返回值本来就是个 Promise），故对外部而言，上述操作所实现的效果<strong>在未报错情况下</strong>等价于：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-title function_">bar</span>())<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如此导致了一个不必要的微任务，从而影响性能。</p>
+<p>而 <a target="_blank" rel="noopener" href="https://v8.dev/blog/fast-async">Faster async functions and promises</a> 修复了这个问题，仅在 await 的内容不是 Promise 时，才会使用 Promise.resolve 将其包裹起来，从而解决了原本的性能问题。</p>
+<p>在改动之后，对于 Promise 对象，对其 await 再返回的性能不再会比直接返回差，甚至<strong>反直觉的是</strong>， await 再返回的性能甚至可能更好，这使得 no-return-await 从一个性能相关的规则退化成了一个代码风格相关的规则（具体的运行测试可以参见 <a target="_blank" rel="noopener" href="https://github.com/eslint/eslint/issues/17345">Rule Change: return await is both faster and allows better error handling #17345</a>）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">/* https://github.com/tc39/proposal-faster-promise-adoption */</span><br><br><span class="hljs-comment">// Directly returning a promise settles `direct` after 2 ticks.</span><br><span class="hljs-keyword">const</span> direct = (<span class="hljs-keyword">async</span> () =&gt; <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-number">1</span>))()<br><br><span class="hljs-comment">// Returning an awaited promise&#x27;s value settles `awaited` after 1 ticks.</span><br><span class="hljs-keyword">const</span> awaited = (<span class="hljs-keyword">async</span> () =&gt; <span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>(<span class="hljs-number">1</span>))()<br></code></pre></td></tr></table></figure>
+
+<p>导致 no-return-await 被废弃的另一个原因在于 return await 可以提供更多的调用栈信息，尤其是当 return 位于 try catch 语句中时，使用 await 可以将错误栈保留在 async 函数中，而不会泄露到外部。</p>
+<p>综上所述，no-return-await 已经不再推荐被使用，取而代之的是<a target="_blank" rel="noopener" href="https://typescript-eslint.io/rules/return-await/">@typescript-eslint&#x2F;return-await</a>。</p>
+
+  
+  
+  
+  <div class="post-nav">
+    <div class="post-nav-item">
+      
+    </div>
+    <div class="post-nav-item">
+      
+      <a href="/2024/08/17/TypeScript-%E5%AE%9E%E8%B7%B5%E5%B0%8F%E8%AE%B0/" rel="next" title="TypeScript 实践小记">
+        TypeScript 实践小记&nbsp;<i class="icon-arrow_forward_ios"></i>
+      </a>
+      
+    </div>
+  </div>
+  
+</article>
+    </main>
+  </div>
+
+  <footer class="footer-outer">
+    <div class="footer-inner">
+      <div class="copyright">
+        Copyright © 2021~2024 <a target="_blank" rel="noopener" href="https://github.com/SummerDiver"><i class="icon-pacmanr"></i>&nbsp;暑熊&nbsp;<i class="icon-pacmanl"></i></a> <br>
+        Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo<i class="icon-new-tab"></i></a>
+        <br>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- scripts list from theme config.yml -->
+  
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  
+  <script src="/js/chippy.js"></script>
+  
+  <script src="/js/menubar.js"></script>
+  
+  <script src="/js/toc.js"></script>
+  
+  
+</body>
+
+</html>

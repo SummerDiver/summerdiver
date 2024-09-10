@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>前端项目文件结构规范设计原则 - 鼠熊部落格</title>
+  
+  <!-- stylesheets list from _config.yml -->
+  
+  <link rel="stylesheet" href="/css/chippy.css">
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <nav class="menu-outer">
+    <div class="menu-inner">
+      
+      <a class="menu-inner-item" href="/">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">首页</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/about">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">关于我</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/archives">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">归档</span>
+      </a>
+      
+    </div>
+  </nav>
+
+  <header class="header-outer">
+    <div class="header-inner">
+      <div class="header-info">
+        
+        <h1 class="header-info-title">
+          Chipmunk &amp; Panda
+        </h1>
+        
+        
+        <h3 class="header-info-subtitle">
+          -- 鼠熊部落格
+        </h3>
+        
+        
+        <p class="header-info-motto">
+          All work and no play makes Jack a dull boy.
+        </p>
+        
+        <div class="header-info-contact">
+          <a target="_blank" rel="noopener" href="https://github.com/SummerDiver" class="header-info-contact-icon">
+            <i class="icon-github"></i>
+          </a>
+          <a target="_blank" rel="noopener" href="https://weibo.com/u/7390819624" class="header-info-contact-icon">
+            <i class="icon-sina-weibo"></i>
+          </a>
+          <a href="mailto:summerdiver@yeah.net" class="header-info-contact-icon">
+            <i class="icon-mail4"></i>
+          </a>
+          <a href="" class="header-info-contact-icon ie" onclick="return false">
+            <i class="icon-IE"></i>
+          </a>
+        </div>
+      </div>
+      <a href="#content" class="header-arrow">
+        <i class="icon-forward2"></i>
+      </a>
+    </div>
+  </header>
+
+  <div id="content" class="content-outer clearfix">
+    <aside id="content-aside" class="content-aside">
+      
+
+<div class="aside-card aside-toc">
+  <h3>文章目录</h3>
+  <div class="toc-content">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#0-%E7%BB%93%E6%9E%84%E7%A4%BA%E4%BE%8B"><span class="post-toc-number">1.</span> <span class="post-toc-text">0 结构示例</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-%E5%88%86%E5%BD%A2%E5%8E%9F%E5%88%99"><span class="post-toc-number">2.</span> <span class="post-toc-text">1 分形原则</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-%E5%B1%82%E7%BA%A7%E4%B8%80%E8%87%B4%E5%8E%9F%E5%88%99"><span class="post-toc-number">3.</span> <span class="post-toc-text">2. 层级一致原则</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-%E5%B0%B1%E8%BF%91%E5%8E%9F%E5%88%99"><span class="post-toc-number">4.</span> <span class="post-toc-text">3. 就近原则</span></a></li></ol>
+  </div>
+</div>
+
+
+<div class="aside-card aside-ov">
+  <div class="author">
+    <div class="author-avatar">
+      <img src="/images/avatar.jpg">
+    </div>
+    <h4 class="author-name">暑熊</h4>
+    <p class="author-motto">自家慢诩便便腹，开卷方知未读书。</p>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="site-state">
+    <a class="site-state-item" href="/archives">
+      <span class="site-state-item-count">25</span>
+      <span class="site-state-item-name">归档</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/categories">
+      <span class="site-state-item-count">5</span>
+      <span class="site-state-item-name">分类</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/tags">
+      <span class="site-state-item-count">21</span>
+      <span class="site-state-item-name">标签</span>
+    </a>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="friends">
+    <div>
+      <i class="icon-link"></i>&nbsp;友情链接
+    </div>
+    
+    <div class="no-friends">
+      <span class="icon-tongue"></span><br>
+      <span>朋友都没有，好像一条狗</span>
+    </div>
+    
+    <ul class="friends-list">
+      
+    </ul>
+  </div>
+</div>
+    </aside>
+    <main class="content-inner">
+      <article id="post">
+  <div class="post-header">
+  
+  <h1 class="post-title" href="/2024/07/23/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">前端项目文件结构规范设计原则</h1>
+  
+
+  <div class="post-meta">
+    <time class="post-date" datetime="2024-07-23T09:05:38.000Z">
+      <i class="icon-calendar"></i>&nbsp;2024-07-23
+    </time>
+
+    
+    <span class="post-categories">
+      <i class="icon-folder">&nbsp;</i>
+      <a class="post-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </span>
+    
+
+    
+    <span class="post-tags">
+      <i class="icon-price-tags">&nbsp;</i>
+      <a class="post-tag-link" href="/tags/React/" rel="tag">#React</a>&nbsp;<a class="post-tag-link" href="/tags/%E8%A7%84%E8%8C%83/" rel="tag">#规范</a>
+    </span>
+    
+  </div>
+</div>
+  
+  <h1 id="0-结构示例"><a href="#0-结构示例" class="headerlink" title="0 结构示例"></a>0 结构示例</h1><blockquote>
+<p>并非最佳实践，实际文件结构设计应根据项目需要自行调整。<br>例如，本结构将路由设计为“目录-子目录-页面”的结构，故会存在 <code>ExampleMenu/ExampleSubMenu/ExamplePage</code> 的结构，而实际若不需要则可以选择 <code>pages/ExamplePage</code> 的结构。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs shell">.<br>└── src<br>    ├── assets<br>    ├── common<br>    │   ├── apis<br>    │   │   ├── ExampleApi<br>    │   │   │   ├── types.d.ts<br>    │   │   │   └── index.ts<br>    │   │   └── AnotherExampleApi<br>    │   ├── hooks<br>    │   └── utils<br>    ├── components<br>    │   ├── ExampleComponent<br>    │   │   ├── SubComponent<br>    │   │   │   ├── types.d.ts<br>    │   │   │   ├── index.scss<br>    │   │   │   └── index.tsx<br>    │   │   ├── AnotherSubComponent<br>    │   │   │   ├── utils.ts<br>    │   │   │   ├── types.d.ts<br>    │   │   │   ├── index.scss<br>    │   │   │   └── index.tsx<br>    │   │   ├── types.d.ts<br>    │   │   ├── index.scss<br>    │   │   └── index.tsx<br>    │   └── AnotherExampleComponent<br>    │       ├── utils.ts<br>    │       ├── types.d.ts<br>    │       ├── index.scss<br>    │       └── index.tsx<br>    ├── pages<br>    │   ├── ExampleMenu<br>    │   │   ├── ExampleSubMenu<br>    │   │   │   ├── ExamplePage<br>    │   │   │   │   ├── api<br>    │   │   │   │   │   ├── types.d.ts<br>    │   │   │   │   │   └── index.ts<br>    │   │   │   │   └── components<br>    │   │   │   │       ├── ExampleComponent<br>    │   │   │   │       │   ├── SubComponent<br>    │   │   │   │       │   │   ├── types.d.ts<br>    │   │   │   │       │   │   ├── index.tsx<br>    │   │   │   │       │   │   └── AnotherSubComponent<br>    │   │   │   │       │   │       ├── types.d.ts<br>    │   │   │   │       │   │       └── index.tsx<br>    │   │   │   │       │   ├── types.d.ts<br>    │   │   │   │       │   └── index.tsx<br>    │   │   │   │       └── AnotherExampleComponent<br>    │   │   │   │           ├── types.d.ts<br>    │   │   │   │           └── index.tsx<br>    │   │   │   ├── utils.ts<br>    │   │   │   ├── types.d.ts<br>    │   │   │   ├── index.scss<br>    │   │   │   └── index.tsx<br>    │   │   └── AnotherExampleSubMenu<br>    │   │       └── AnotherExamplePage<br>    │   │           ├── apis<br>    │   │           │   ├── ExampleApi<br>    │   │           │   │   ├── types.d.ts<br>    │   │           │   │   └── index.ts<br>    │   │           │   └── AnotherExampleApi<br>    │   │           ├── utils.ts<br>    │   │           ├── types.d.ts<br>    │   │           ├── index.scss<br>    │   │           └── index.tsx<br>    ├── router<br>    │   ├── ExampleRoute<br>    │   │   ├── ModuleLoader.tsx<br>    │   │   └── RouterConfig.ts<br>    │   └── index.tsx<br>    ├── store<br>    │   ├── expampleStore.ts<br>    │   ├── anotherExampleStore.ts<br>    │   └── index.ts<br>    └── types<br>        ├── error.d.ts<br>        ├── event.d.ts<br>        └── index.d.ts<br></code></pre></td></tr></table></figure>
+
+<h1 id="1-分形原则"><a href="#1-分形原则" class="headerlink" title="1 分形原则"></a>1 分形原则</h1><p>分形原则：父子目录结构尽量保持一致。例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs shell">.<br>└── src<br>    ├── components<br>    └── pages<br>        ├── AnotherExamplePage<br>        │   └── ...<br>        └── ExamplePage<br>            ├── AnotherSubPage<br>            │   └── ...<br>            ├── SubPage<br>            │   ├── components<br>            │   │   └── ...<br>            │   ├── constants.ts<br>            │   ├── types.d.ts<br>            │   ├── index.scss<br>            │   └── index.tsx<br>            ├── components<br>            │   └── ExampleComponent<br>            │       └── ...<br>            └── index.tsx<br></code></pre></td></tr></table></figure>
+
+<p>ExamplePage 与 SubPage 结构均是 index.tsx + components。</p>
+<h1 id="2-层级一致原则"><a href="#2-层级一致原则" class="headerlink" title="2. 层级一致原则"></a>2. 层级一致原则</h1><p>层级一致原则：引用、依赖、逻辑等关系层级应与目录层级相对应，不同关系层级的文件应尽量不出现在同一目录层级，尽量确保目录结构能直观体现出文件之间的关系（就像思维导图）。例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">.<br>└── src<br>    └── components<br>        ├── BadComponent<br>        │   ├── SubComponentA.tsx<br>        │   ├── SubComponentB.tsx<br>        │   └── index.tsx<br>        └── GoodComponent<br>            ├── SubComponentA<br>            │   └── index.tsx<br>            ├── SubComponentB<br>            │   └── index.tsx<br>            └── index.tsx<br></code></pre></td></tr></table></figure>
+
+<p>虽然在上述文件结构中，GoodComponent 看起来与 BadComponent 相比可能没有明显优势，甚至目录结构更加复杂冗余，但当子组件数量很多或者存在 .scss 等文件时，GoodComponent 就可以很好地将各个文件约束在适当的范围内。</p>
+<p>需要注意，目录层级不应是无限度的深，无论是页面还是组件，都应最多只出现父子关系，避免过分套娃，否则反而会增加维护难度。</p>
+<h1 id="3-就近原则"><a href="#3-就近原则" class="headerlink" title="3. 就近原则"></a>3. 就近原则</h1><p>就近原则：对于 api、utils 等文件，放置位置应与使用到的地方尽可能近。例如，如果一个 api 仅有一个组件用到，则应将其与该组件放到一起，而不是放到浅层级目录。例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell">.<br>└── src<br>    └── pages<br>        └── ExamplePage<br>            ├── SubPage<br>            │   └── ...<br>            ├── components<br>            │   └── ...<br>            ├── api.ts<br>            ├── utils.ts<br>            └── index.tsx<br></code></pre></td></tr></table></figure>
+
+<p>需要注意的是，就近原则不是绝对的近。对于 api 和 utils，即使存在多个子组件，一个父组件总共会需要的 api 或 utils 总量通常也不会太多，因此将其统一放在父组件同级目录会更加便于管理维护，没必要在各个子组件目录下分别进行维护（在尽量不增加文件数的前提下尽可能减少依赖文件之间的目录层级跨度，二者需要权衡）。</p>
+
+  
+  
+  
+  <div class="post-nav">
+    <div class="post-nav-item">
+      
+      <a href="/2024/08/17/TypeScript-%E5%AE%9E%E8%B7%B5%E5%B0%8F%E8%AE%B0/" rel="prev" title="TypeScript 实践小记">
+        <i class="icon-arrow_back_ios"></i>&nbsp;TypeScript 实践小记
+      </a>
+      
+    </div>
+    <div class="post-nav-item">
+      
+      <a href="/2024/03/06/Ubuntu%E4%BD%BF%E7%94%A8%E5%8F%8D%E5%90%91SSH%E8%BF%9E%E6%8E%A5%E5%AE%9E%E7%8E%B0%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%E5%86%85%E7%BD%91%E8%AE%BE%E5%A4%87/" rel="next" title="Ubuntu 使用 SSH 反向通道实现外网访问内网设备">
+        Ubuntu 使用 SSH 反向通道实现外网访问内网设备&nbsp;<i class="icon-arrow_forward_ios"></i>
+      </a>
+      
+    </div>
+  </div>
+  
+</article>
+    </main>
+  </div>
+
+  <footer class="footer-outer">
+    <div class="footer-inner">
+      <div class="copyright">
+        Copyright © 2021~2024 <a target="_blank" rel="noopener" href="https://github.com/SummerDiver"><i class="icon-pacmanr"></i>&nbsp;暑熊&nbsp;<i class="icon-pacmanl"></i></a> <br>
+        Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo<i class="icon-new-tab"></i></a>
+        <br>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- scripts list from theme config.yml -->
+  
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  
+  <script src="/js/chippy.js"></script>
+  
+  <script src="/js/menubar.js"></script>
+  
+  <script src="/js/toc.js"></script>
+  
+  
+</body>
+
+</html>

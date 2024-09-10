@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TypeScript 实践小记 - 鼠熊部落格</title>
+  
+  <!-- stylesheets list from _config.yml -->
+  
+  <link rel="stylesheet" href="/css/chippy.css">
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <nav class="menu-outer">
+    <div class="menu-inner">
+      
+      <a class="menu-inner-item" href="/">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">首页</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/about">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">关于我</span>
+      </a>
+      
+      <a class="menu-inner-item" href="/archives">
+        <span class="menu-inner-item-icon"></span>
+        <span class="menu-inner-item-text">归档</span>
+      </a>
+      
+    </div>
+  </nav>
+
+  <header class="header-outer">
+    <div class="header-inner">
+      <div class="header-info">
+        
+        <h1 class="header-info-title">
+          Chipmunk &amp; Panda
+        </h1>
+        
+        
+        <h3 class="header-info-subtitle">
+          -- 鼠熊部落格
+        </h3>
+        
+        
+        <p class="header-info-motto">
+          All work and no play makes Jack a dull boy.
+        </p>
+        
+        <div class="header-info-contact">
+          <a target="_blank" rel="noopener" href="https://github.com/SummerDiver" class="header-info-contact-icon">
+            <i class="icon-github"></i>
+          </a>
+          <a target="_blank" rel="noopener" href="https://weibo.com/u/7390819624" class="header-info-contact-icon">
+            <i class="icon-sina-weibo"></i>
+          </a>
+          <a href="mailto:summerdiver@yeah.net" class="header-info-contact-icon">
+            <i class="icon-mail4"></i>
+          </a>
+          <a href="" class="header-info-contact-icon ie" onclick="return false">
+            <i class="icon-IE"></i>
+          </a>
+        </div>
+      </div>
+      <a href="#content" class="header-arrow">
+        <i class="icon-forward2"></i>
+      </a>
+    </div>
+  </header>
+
+  <div id="content" class="content-outer clearfix">
+    <aside id="content-aside" class="content-aside">
+      
+
+<div class="aside-card aside-toc">
+  <h3>文章目录</h3>
+  <div class="toc-content">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81-TS"><span class="post-toc-number">1.</span> <span class="post-toc-text">1 为何需要 TS</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-interface-vs-type"><span class="post-toc-number">2.</span> <span class="post-toc-text">2 interface vs type</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E4%BD%8D%E7%BD%AE"><span class="post-toc-number">3.</span> <span class="post-toc-text">3 类型声明位置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-%E6%B3%9B%E5%9E%8B%E4%B8%8E%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%9E%8B"><span class="post-toc-number">4.</span> <span class="post-toc-text">4 泛型与工具类型</span></a></li></ol>
+  </div>
+</div>
+
+
+<div class="aside-card aside-ov">
+  <div class="author">
+    <div class="author-avatar">
+      <img src="/images/avatar.jpg">
+    </div>
+    <h4 class="author-name">暑熊</h4>
+    <p class="author-motto">自家慢诩便便腹，开卷方知未读书。</p>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="site-state">
+    <a class="site-state-item" href="/archives">
+      <span class="site-state-item-count">25</span>
+      <span class="site-state-item-name">归档</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/categories">
+      <span class="site-state-item-count">5</span>
+      <span class="site-state-item-name">分类</span>
+    </a>
+    <div class="divider-vertical"></div>
+    <a class="site-state-item" href="/tags">
+      <span class="site-state-item-count">21</span>
+      <span class="site-state-item-name">标签</span>
+    </a>
+  </div>
+  <div class="divider-horizontal"></div>
+  <div class="friends">
+    <div>
+      <i class="icon-link"></i>&nbsp;友情链接
+    </div>
+    
+    <div class="no-friends">
+      <span class="icon-tongue"></span><br>
+      <span>朋友都没有，好像一条狗</span>
+    </div>
+    
+    <ul class="friends-list">
+      
+    </ul>
+  </div>
+</div>
+    </aside>
+    <main class="content-inner">
+      <article id="post">
+  <div class="post-header">
+  
+  <h1 class="post-title" href="/2024/08/17/TypeScript-%E5%AE%9E%E8%B7%B5%E5%B0%8F%E8%AE%B0/">TypeScript 实践小记</h1>
+  
+
+  <div class="post-meta">
+    <time class="post-date" datetime="2024-08-17T09:02:59.000Z">
+      <i class="icon-calendar"></i>&nbsp;2024-08-17
+    </time>
+
+    
+    <span class="post-categories">
+      <i class="icon-folder">&nbsp;</i>
+      <a class="post-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </span>
+    
+
+    
+    <span class="post-tags">
+      <i class="icon-price-tags">&nbsp;</i>
+      <a class="post-tag-link" href="/tags/TypeScript/" rel="tag">#TypeScript</a>
+    </span>
+    
+  </div>
+</div>
+  
+  <blockquote>
+<p>本文绝大多数内容基于个人理解，并不能保证绝对性，也因此值得交流探讨，求同存异。</p>
+</blockquote>
+<h1 id="1-为何需要-TS"><a href="#1-为何需要-TS" class="headerlink" title="1 为何需要 TS"></a>1 为何需要 TS</h1><p>TS 的优势与必要性已经是一个较为老生常谈的问题，TS 的核心在于为 JS 提供了显式类型支持，从而让 JavaScript 更像 Java。就项目工程化本身而言，显式类型支持的优势不言而喻，JS 中的许多错误都源于对变量类型的考虑不周，<strong>引入 TS 则可以通过指定类型来保证代码行为更加“可以预料”，尽可能地将各种错误扼杀在摇篮中，加强代码的健壮性。</strong></p>
+<p>话虽如此，为项目（尤其是已经有了历史沉淀的老项目）引入 TS 的结果却常常是让原本不报错且正常运行的代码变得“大红大紫”，并且对原本灵活的 JS 编程处处掣肘：一方面，TS 暴露出的一些问题实际可能并不是问题（毕竟代码可能早就带着这些问题正常运行了数年，甚至代码本身就是依靠 Bug 才能运行起来）；另一方面，JS 原本的魅力之一就是不甚规范但相当灵活的类型限制，而 TS 所要求的“按章办事“无疑会让人如坐针毡。<strong>因此，对于程序员而言，TS 所提供的类型检查与代码安全可能并没有那么大的吸引力——尤其是当规范与效率存在冲突时。</strong></p>
+<p>实际上，相比于提供类型检查，TS 真正的魅力可能更多在于基于类型检查而提供的代码建议——只消敲下 Tab 键而不是将代码逐字敲完的诱惑实在是让人无法自拔。举例而言：假设要实现一个函数，其作用是返回输入的字符串的小写形式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">printSet</span> = (<span class="hljs-params">str</span>) =&gt; &#123;<br>  <span class="hljs-keyword">return</span> str.<span class="hljs-title function_">toLowerCase</span>()<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>编程的快感会在敲下 <code>str.t</code> 时戛然而止，因为 IDE 没有给出任何有用的提示，使得程序员不得不凭借记忆将 toLowerCase 一字不落地敲出来，至于敲没敲对，甚至字符串类型是不是真的有这个方法，就只能跑一遍试试了。</p>
+<p><img src="/assets/img/x-1/1-%E7%BA%AFjs%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E5%BB%BA%E8%AE%AE.png"></p>
+<p>此时，TS 就如救世主一般降临，通过为 str 指定 string 类型，就可以让其获得完美的代码建议——</p>
+<p><img src="/assets/img/x-1/2-ts%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E5%BB%BA%E8%AE%AE.png"></p>
+<p>可以看出，TS 在这里其实是实现了<strong>“在不改变编译结果的前提下，告诉 IDE 变量的类型，从而获得完整的代码建议体验”</strong>，并且这一功能对于非原始数据类型也同样适用——只要类型声明得足够到位。</p>
+<p><strong>综上所述，使用 TS 的理由无外乎两大点：</strong></p>
+<p><strong>1. 严格的静态类型检查使代码更加安全；</strong><br><strong>2. 主动类型声明使代码建议更加无处不在，带来了更加愉悦的编码体验（而类型检查则保证了主动声明类型的安全性，避免指鹿为马）。</strong></p>
+<p>甚至可以极端地认为，TS 的本质就是带来了基于类型的更加丰富的代码建议，而类型检查等只是类型声明所带来的“副作用”而已（实际上当然不是这样）。</p>
+<h1 id="2-interface-vs-type"><a href="#2-interface-vs-type" class="headerlink" title="2 interface vs type"></a>2 interface vs type</h1><p>TS 有两种声明类型的方式，即 interface 与 type，<a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces">二者的区别并不是很大</a>。在初步接触 TS 时，很难单纯根据官方手册所提供的信息对二者进行较为清晰的区分与抉择，大多数人可能也只是较为囫囵地接受了官方“有 interface 选 interface，无 interface 再 type”的建议（If you would like a heuristic, use interface until you need to use features from type）。</p>
+<p><img src="/assets/img/x-1/3-interface%E4%B8%8Etype.png"></p>
+<p>与其探讨 interface 与 type 分别能做什么、不能做什么，不如从中抽丝剥茧出二者的定位区别——<strong>interface 更加强调类型之间的交互（类型合并与 extends），type 则更强调类型的独立性与确定性（不可重复声明）。或者说，interface 更像引用类型，type 更像原始类型。</strong></p>
+<p>interface 无论是与 Java 中一样的命名，还是所支持的 extends 语法，亦或是不支持原始类型，均在表达 TS 希望用户将其当作“类”来使用，即用于描述对象的形状，以及各个对象类型之间的关系：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Animal</span> &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span><br>&#125;<br><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Bear</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span> &#123;<br>  <span class="hljs-attr">honey</span>: <span class="hljs-built_in">boolean</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>而对于 type，虽然其也能通过 &amp; 运算实现与 extends 一样的效果，但从语义而言，其所表示的含义可能仅仅是通过运算得到一个新的类型值而已，其全称“Type Aliases（类型别名）”以及不可重复声明与更改（就像 const）的特性也正是表达这一意向。这也是为什么 Type 支持了大量的类型运算，而 interface 只有一个 extends 的原因。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">WeekDays</span> = <span class="hljs-string">&#x27;Monday&#x27;</span> | <span class="hljs-string">&#x27;Tuesday&#x27;</span> | <span class="hljs-string">&#x27;Wednesday&#x27;</span> | <span class="hljs-string">&#x27;Thursday&#x27;</span> | <span class="hljs-string">&#x27;Friday&#x27;</span><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">Weekends</span> = <span class="hljs-string">&#x27;Saturday&#x27;</span> | <span class="hljs-string">&#x27;Sunday&#x27;</span><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">Week</span> = <span class="hljs-title class_">WeekDays</span> &amp; <span class="hljs-title class_">Weekends</span><br></code></pre></td></tr></table></figure>
+
+<p>可以理解为：<strong>type 用于声明各种各样的、JS 原生并不存在的类型，interface 则负责使用这些类型来描述各种具体的对象。</strong>这一理解也与 TS 官方对二者的推荐大致吻合，当 interface 无法胜任，则很可能是需要定义一些新的类型（类型运算也还是为了生产新的类型），此时自然应该使用 type；否则，既然不需要定义新类型，自然也就没必要使用 type，此时应当选择语义更清晰的 interface。</p>
+<p>总而言之，<strong>interface 与 type 的并无优劣</strong>（否则其中一个也没必要存在），优先使用 interface 也只是出于 TS 本身的设计考虑而已。实际上，type 支持更多复杂的类型操作，且几乎能完成 interface 所能完成的所有功能，故其在使用的灵活性方面要远超 interface，优先使用 type 也并非不可。更为重要的是，<strong>type 不可重复声明，从而避免了同名类型所带来的混淆</strong>，因此，在面对较为庞大的类型文件时，type 也不失为更加强大而保险的选择。</p>
+<blockquote>
+<p>API 类型声明时使用 type 的优势：</p>
+<ol>
+<li>更加灵活的语法（如原始类型、联合类型、枚举类型）。</li>
+<li>type 不可重复声明，避免多个接口使用同一类型时的重复类型声明以及混淆（使用 interface 时，如果重复声明了同名不同质的 interface，则会发生类型合并）。</li>
+</ol>
+</blockquote>
+<p>此外，需要注意的是，虽然 TS 本身支持以下做法：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">interface</span> A &#123;<br>  <span class="hljs-attr">prop1</span>: <span class="hljs-built_in">string</span><br>&#125;<br><span class="hljs-keyword">type</span> B = A &amp; &#123;<br>  <span class="hljs-attr">prop2</span>: <span class="hljs-built_in">boolean</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>但这样会让 interface A 所发生的类型合并也体现在 type B 上，使 type 不再是“确定的”，因此应尽量避免这种做法。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">interface</span> A &#123;<br>  <span class="hljs-attr">prop1</span>: <span class="hljs-built_in">string</span><br>&#125;<br><span class="hljs-keyword">type</span> B = A &amp; &#123;<br>  <span class="hljs-attr">prop2</span>: <span class="hljs-built_in">boolean</span><br>&#125;<br><br><span class="hljs-keyword">const</span> <span class="hljs-attr">obj1</span>: B = &#123;<br>  <span class="hljs-comment">// 需要包含 prop1、prop2、prop3</span><br>&#125;<br><br><span class="hljs-keyword">interface</span> A &#123;<br>  <span class="hljs-attr">prop3</span>: <span class="hljs-built_in">number</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="3-类型声明位置"><a href="#3-类型声明位置" class="headerlink" title="3 类型声明位置"></a>3 类型声明位置</h1><p>对于以下场景：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">const</span> printObject = &#123;<br>  <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;*&#x27;</span>,<br>  <span class="hljs-attr">repeat</span>: <span class="hljs-number">5</span>,<br>&#125;<br><span class="hljs-keyword">const</span> <span class="hljs-title function_">printFunc</span> = (<span class="hljs-params">obj</span>) =&gt; &#123;<br>  <span class="hljs-keyword">return</span> obj.<span class="hljs-property">symbol</span>.<span class="hljs-title function_">repeat</span>(obj.<span class="hljs-property">repeat</span>)<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">printFunc</span>(printObject))<br></code></pre></td></tr></table></figure>
+
+<p>在引入 TS 时，可以进行类型声明的位置包括：</p>
+<ol>
+<li>为 printObject 指定类型；</li>
+<li>为 printFunc 指定类型；</li>
+<li>为 printFunc 的参数 obj 指定类型，返回值类型则借助类型推断（在这里为 string）。</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">PrintObject</span> = &#123;<br>  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span><br>  <span class="hljs-attr">repeat</span>: <span class="hljs-built_in">number</span><br>&#125;<br><span class="hljs-keyword">const</span> <span class="hljs-attr">printObject</span>: <span class="hljs-comment">/* 位置 1 */</span> <span class="hljs-title class_">PrintObject</span> = &#123;<br>  <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;_&#x27;</span>,<br>  <span class="hljs-attr">repeat</span>: <span class="hljs-number">5</span>,<br>&#125;<br><span class="hljs-keyword">type</span> <span class="hljs-title class_">PrintFunc</span> = <span class="hljs-function">(<span class="hljs-params">obj: PrintObject</span>) =&gt;</span> <span class="hljs-built_in">string</span><br><span class="hljs-keyword">const</span> <span class="hljs-attr">printFunc</span>: <span class="hljs-comment">/* 位置 2 */</span> <span class="hljs-title class_">PrintFunc</span> = <span class="hljs-function">(<span class="hljs-params">obj: <span class="hljs-comment">/* 位置 3 */</span> PrintObject</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">return</span> obj.<span class="hljs-property">symbol</span>.<span class="hljs-title function_">repeat</span>(obj.<span class="hljs-property">repeat</span>)<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">printFunc</span>(printObject))<br></code></pre></td></tr></table></figure>
+
+<p>除了提供类型支持，类型声明本身存在语义化作用，不同的声明位置则可能体现了不同的设计思路。以 printFunc 为例，虽然最终效果对外部而言均是声明了函数的入参与出参类型，但位置 2 与位置 3 可能体现了不同的开发场景：</p>
+<ul>
+<li>位置 2：明确一个函数的功能与输入输出后，再对函数进行实现。</li>
+<li>位置 3：实现完成一个函数后，再根据实现结果告诉外界函数应该如何使用。</li>
+</ul>
+<p>显然，<strong>位置 2 所体现的才是相对规范的开发流程，而位置 3 则可能更多出现在为现有代码添加类型支持的情况中</strong>。未来开发中，<strong>更推荐在函数开发前明确参数类型，并在位置 2 为其进行类型声明</strong>，以获得较为清晰的开发体验。<a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript/wiki/Performance#using-type-annotations">此外，减少类型推断也有利于提升 TS 编译器的效率</a>。</p>
+<p>而对于 printObject，由于 printFunc 本身已指定了入参类型，所以位置 1 的类型声明看似并非必要（在调用函数时自然会检查传入变量类型是否符合要求），但实际上，是否在位置 1 进行类型声明可能也体现了不同的开发场景：</p>
+<ul>
+<li>进行类型声明：先定义了 printObject，然后定义了用于输出该对象的函数 printFunc。</li>
+<li>不进行类型声明：先定义了打印函数 printFunc，然后根据使用场景为函数传入参数 printObject。</li>
+</ul>
+<p>这有点类似“先有鸡还是先有蛋”的问题了，过分追究这方面的语义化其实并没有太大意义。而从开发体验而言，不同的类型声明位置会导致不同的报错时机，<strong>保持在位置 1 进行类型声明可以让类型错误在定义变量时就暴露出来，而不是等到传入时才发现，因此，坚持为变量进行类型声明可能会更有优势一些（尤其是在使用组件并向其传递 prop 时）。</strong></p>
+<h1 id="4-泛型与工具类型"><a href="#4-泛型与工具类型" class="headerlink" title="4 泛型与工具类型"></a>4 泛型与工具类型</h1><p>泛型是几乎所有强类型语言都必不可少的特性之一。TS 的泛型使其具备了“高阶类型”的功能——根据一个不确定的类型得到一个新的类型。</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">Page</span>&lt;T&gt; = &#123;<br>  <span class="hljs-attr">data</span>: T[]<br>  <span class="hljs-attr">total</span>: <span class="hljs-built_in">number</span><br>  <span class="hljs-attr">pageNum</span>: <span class="hljs-built_in">number</span><br>  <span class="hljs-attr">pageSize</span>: <span class="hljs-built_in">number</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>使用了泛型的类型几乎可以视作“类型处理函数”，就像 String 的 slice()、replace() 等方法一样，而这也是 TS 提供的各种<a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/handbook/utility-types.html">工具类型</a>所做的。此处仅列举部分工具类型，意在揭露它们的存在，为复杂类型的定义提供启发。</p>
+<ul>
+<li>Partial<Type>：原样返回 Type，但是其所有属性都会变为可选。</li>
+<li>Required<Type>：与 Partial<Type> 相反。</li>
+<li>Record&lt;Keys, Type&gt;：返回对象类型，key 值均属于 Keys，value 类型则为 Type。</li>
+<li>Pick&lt;Type, Keys&gt;：从 Type 中节选 Keys 所包含的属性，得到新的对象类型。</li>
+<li>Omit&lt;Type, Keys&gt;：从 Type 中除去 Keys 所包含的属性，得到新的对象类型。</li>
+<li>……</li>
+</ul>
+<p>此外，就像 <a target="_blank" rel="noopener" href="https://lodash.com/">lodash</a> 一样，一些第三方库（比如 <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/type-fest">type-fest</a>）提供了 TS 原生没有但值得有的基础类型和工具类型，从而避免自行重复定义一些较为复杂的类型。毕竟，TS 本身定位更倾向于作为开发辅助工具，对于大部分非公共项目，可能并不是很有必要对 TS 进行太过深入的钻研，“面相需求学习”往往会更加高效一些。倘若追求对 TS 达到“高精尖”的掌握，可以尝试 <a target="_blank" rel="noopener" href="https://github.com/type-challenges/type-challenges">type-challenges</a> 等练习题库。</p>
+
+  
+  
+  
+  <div class="post-nav">
+    <div class="post-nav-item">
+      
+      <a href="/2024/09/10/ESLint-no-return-await-%E8%A7%84%E5%88%99/" rel="prev" title="ESLint no-return-await 规则">
+        <i class="icon-arrow_back_ios"></i>&nbsp;ESLint no-return-await 规则
+      </a>
+      
+    </div>
+    <div class="post-nav-item">
+      
+      <a href="/2024/07/23/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/" rel="next" title="前端项目文件结构规范设计原则">
+        前端项目文件结构规范设计原则&nbsp;<i class="icon-arrow_forward_ios"></i>
+      </a>
+      
+    </div>
+  </div>
+  
+</article>
+    </main>
+  </div>
+
+  <footer class="footer-outer">
+    <div class="footer-inner">
+      <div class="copyright">
+        Copyright © 2021~2024 <a target="_blank" rel="noopener" href="https://github.com/SummerDiver"><i class="icon-pacmanr"></i>&nbsp;暑熊&nbsp;<i class="icon-pacmanl"></i></a> <br>
+        Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo<i class="icon-new-tab"></i></a>
+        <br>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- scripts list from theme config.yml -->
+  
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  
+  <script src="/js/chippy.js"></script>
+  
+  <script src="/js/menubar.js"></script>
+  
+  <script src="/js/toc.js"></script>
+  
+  
+</body>
+
+</html>
